@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="assets/css/main.css">
+			<link rel="stylesheet" href="assets/css/button.css">
+			<link rel="stylesheet" href="assets/css/records.css">
+			<link rel="stylesheet" href="assets/css/model.css">
+			<script src="assets/js/main.js" defer></script>
+			<title>SMS CRUD</title>
+		</head>
+		<body>
+<nav>
+	<ul>
+		<li><a class="btn" href="login.html"><em>log out</em></a>
+			<style>
+				.btn{
+					background-color: black;
+					color: aliceblue;
+					padding: 10px;
+					text-decoration: none;
+					border-radius: 30px;
+					
+					
+
+				}
+			</style>
+
+		</li>
+	</ul>
+
+</nav>
+
+
+			<header>
+				<h1 class="header-title">gestion de facture </h1>
+				
+			</header>
+			<main>
+			   <button class="button blue mobile"  id="idStudent">nouvelle facture</button>
+			   <table id="tblStudent" class="records">
+				   <thead>
+					   <tr>
+						   <td>date</td>
+						   <td>numero d'article</td>
+						   <td>description</td>
+						   <td>prix unitaire</td>
+						   <td>quantité</td>
+						   <td>montants</td>
+						   <td>Actions</td>
+					   </tr>
+				   </thead>
+				   <tbody>
+
+				   </tbody>
+			   </table>
+			   <!-- <div class="model active" id="model"> -->
+				<div class="model" id="model">
+				<div class="model-content">
+					<header class="model-header">
+						<h2>creer une nouvelle facture</h2>
+						<span class="model-close" id="modelClose">&#10006;</span>
+					</header>
+					<form id="form" class="model-form">
+						<input type="date" class="model-field" id="date" data-index="new" placeholder="date" required>
+						<input type="texte" class="model-field" id="texte" placeholder="numero d'article" required>
+						<input type="text" class="model-field" id="phone" placeholder="description" required>
+						<input type="text" class="model-field" id="fees" placeholder="prix unitaire" required>
+						<input type="text" class="model-field" id="level" placeholder="quantité" required>
+						<input type="text" class="model-field" id="school" placeholder="montants" required>
+					</form>
+					<footer class="model-footer">
+						<button class="button green" id="save">Enregistrer</button>
+						<button class="button blue" id="cancel">Annuler</button>
+					</footer>
+				</div>
+			   </div>
+			</main>
+			<footer>
+			   Copyright &copy; Hltic Corp 2022 <br>
+			   Amira idriss abakar<br>
+			   Full Stack Senior Developer<br>
+			  <br>
+			  amiradirchi20@gmail.com<br>
+			</footer>
+		</body>
+		</html>

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+	@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+body{
+    background-image: url("../img/etudes_comptable_zoom.jpg");
+    background-repeat: repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+}
+
+
+nav{
+    background-color: #1b1b11;
+    
+}
+
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li{
+    float: left;
+    background: #1b1b11;
+    margin: 0 5px;
+    /* display: inline-block; */
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover{
+    color: cyan;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul ul{
+    border-top: none;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a{
+    line-height: 50px;
+}
+
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+nav .logo{
+    color: white;
+    float: left;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 70px;
+    /* display: none; */
+}
+
+.fa-plus{
+    margin-left: 60px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+nav ul ul li a span:hover{
+    color: cyan;
+}
+
+.show, .icon, input{
+    display: none;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: .2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+
+  }
+  
+
+
+@media all and (max-width: 968px){
+    nav ul{
+        margin-right: 0;
+        float: left;
+    }    
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+        
+    }
+
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul{
+        top: 70px;
+        position: static;
+
+         border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible; 
+    }
+
+    .show{
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+
+    .show:hover{
+        color: cyan;
+    }
+
+    .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .show + a, ul{
+        display: none;
+    }
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+
+    nav ul ul ul li{
+        position: static;
+    }
+
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+
+    nav ul ul a {
+        padding-left: 40px;
+    }
+
+    nav ul ul ul a {
+        padding-left: 40px;
+    }
+}
+
